@@ -20,4 +20,8 @@ public class ActorService implements GraphQLQueryResolver {
     public List<Actor> getAllActors() {
         return actorRepository.findAll();
     }
+
+    public Actor getActorbyId(Integer id) {
+        return actorRepository.findById(id).get();
+    }
 }
